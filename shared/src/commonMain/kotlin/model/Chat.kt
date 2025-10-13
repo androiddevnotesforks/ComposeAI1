@@ -2,7 +2,7 @@ package model
 
 import com.ebfstudio.appgpt.common.ChatEntity
 import com.ebfstudio.appgpt.common.GetAllChats
-import kotlinx.datetime.Instant
+import kotlin.time.Instant
 
 fun GetAllChats.toChats(): ChatEntity = ChatEntity(
     id = id,

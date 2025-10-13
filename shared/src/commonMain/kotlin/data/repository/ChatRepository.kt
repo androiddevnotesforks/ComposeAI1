@@ -11,7 +11,6 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.withContext
-import kotlinx.datetime.Clock
 
 class ChatRepository(
     private val chatEntityQueries: ChatEntityQueries,
@@ -32,7 +31,7 @@ class ChatRepository(
         val chatId = uuid4().toString()
         chatEntityQueries.insertChat(
             id = chatId,
-            createdAt = Clock.System.now(),
+            createdAt = kotlin.time.Clock.System.now(),
             title = null,
         )
         return@withContext chatId

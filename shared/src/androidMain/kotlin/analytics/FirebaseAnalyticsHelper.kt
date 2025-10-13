@@ -17,7 +17,7 @@
 package analytics
 
 import com.google.firebase.analytics.FirebaseAnalytics
-import com.google.firebase.analytics.ktx.logEvent
+import com.google.firebase.analytics.logEvent
 import io.github.aakira.napier.Napier
 
 private const val TAG = "FirebaseAnalyticsHelperAndroid"

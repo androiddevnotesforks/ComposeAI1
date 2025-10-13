@@ -12,6 +12,8 @@ plugins {
 }
 
 kotlin {
+    jvmToolchain(17)
+
     androidTarget {
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_17)
@@ -104,8 +106,8 @@ kotlin {
 
             // Firebase
             api(project.dependencies.platform(libs.firebase.bom))
-            api(libs.firebase.analytics.ktx)
-            api(libs.firebase.crashlytics.ktx)
+            api(libs.firebase.analytics)
+            api(libs.firebase.crashlytics)
             api(libs.firebase.appcheck.playintegrity)
 
             // AdMob

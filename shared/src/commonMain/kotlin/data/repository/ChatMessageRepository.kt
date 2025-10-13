@@ -22,7 +22,6 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
-import kotlinx.datetime.Clock
 import model.AppPlatform
 import model.ChatMessageStatus
 import model.asModel
@@ -65,7 +64,7 @@ class ChatMessageRepository(
             id = uuid4().toString(),
             role = userMessage.role,
             content = userMessage.content ?: "?",
-            createdAt = Clock.System.now(),
+            createdAt = kotlin.time.Clock.System.now(),
             chatId = chatId,
             status = ChatMessageStatus.SENT,
         )
@@ -130,7 +129,7 @@ class ChatMessageRepository(
             id = assistantMessageId,
             role = ChatRole.Assistant,
             content = "",
-            createdAt = Clock.System.now(),
+            createdAt = kotlin.time.Clock.System.now(),
             chatId = chatId,
             status = ChatMessageStatus.LOADING,
         )

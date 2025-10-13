@@ -11,7 +11,6 @@ import data.repository.ChatMessageRepository
 import data.repository.ChatRepository
 import data.repository.CoinRepository
 import data.repository.PreferenceRepository
-import io.ktor.utils.io.core.String
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -64,7 +63,9 @@ val commonModule = module {
 
     // Others
     factory { Dispatchers.Default }
-    single { OpenAI(String(Base64.decode(BuildKonfigCommon.OPENAI_API_KEY))) }
+    single {
+        val bytes = Base64.decode(BuildKonfigCommon.OPENAI_API_KEY)
+        OpenAI(bytes.decodeToString(0, 0 + bytes.size)) }
     single {
         val factory: SettingsFactory = get()
         factory.createSettings()

@@ -1,30 +1,30 @@
 [versions]
 accompanistSystemuicontroller = "0.36.0"
-activityCompose = "1.10.1"
-agp = "8.11.0"
+activityCompose = "1.11.0"
+agp = "8.13.0"
 android-compileSdk = "36"
 billingKtx = "8.0.0"
 buildkonfigGradlePlugin = "0.17.1"
-coil3 = "3.2.0"
-compose = "1.8.2"
-coreKtx = "1.16.0"
+coil3 = "3.3.0"
+compose = "1.9.0"
+coreKtx = "1.17.0"
 coreSplashscreen = "1.0.1"
 datastorePreferences = "1.1.7"
 desugar_jdk_libs = "2.1.5"
-firebaseBom = "33.16.0"
-firebaseCrashlyticsGradle = "3.0.4"
-googleServices = "4.4.3"
+firebaseBom = "34.4.0"
+firebaseCrashlyticsGradle = "3.0.6"
+googleServices = "4.4.4"
 imageLoader = "1.10.0"
-koin = "4.1.0"
-kotlin = "2.2.0"
+koin = "4.1.1"
+kotlin = "2.2.20"
 kotlinComposeCompiler = "1.5.11"
-kotlinxDatetime = "0.6.0"
-ktor = "3.1.3"
+kotlinxDatetime = "0.7.1"
+ktor = "3.3.1"
 markdown = "0.7.3"
 napier = "2.7.1"
 openaiClient = "4.0.1"
-playServicesAds = "24.4.0"
-purchases-kmp = "1.8.6+14.0.2"
+playServicesAds = "24.7.0"
+purchases-kmp = "2.2.2+17.10.0"
 reviewKtx = "2.0.2"
 settings = "1.3.0"
 sqlDelight = "2.1.0"
@@ -46,11 +46,11 @@ core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = 
 coroutines-extensions = { module = "app.cash.sqldelight:coroutines-extensions", version.ref = "sqlDelight" }
 datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
 desugar_jdk_libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar_jdk_libs" }
-firebase-analytics-ktx = { module = "com.google.firebase:firebase-analytics-ktx" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
 firebase-appcheck-playintegrity = { module = "com.google.firebase:firebase-appcheck-playintegrity" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 firebase-crashlytics-gradle = { module = "com.google.firebase:firebase-crashlytics-gradle", version.ref = "firebaseCrashlyticsGradle" }
-firebase-crashlytics-ktx = { module = "com.google.firebase:firebase-crashlytics-ktx" }
+firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
 google-services = { module = "com.google.gms:google-services", version.ref = "googleServices" }
 image-loader = { module = "io.github.qdsfdhvh:image-loader", version.ref = "imageLoader" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }

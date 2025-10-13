@@ -29,7 +29,6 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.flow.updateAndGet
 import kotlinx.coroutines.launch
-import kotlinx.datetime.Clock
 import model.toChats
 import model.updatedAt
 import kotlin.time.Duration.Companion.minutes
@@ -86,7 +85,7 @@ class ChatScreenModel(
         if (initialChatId == null) {
             screenModelScope.launch {
                 val latestChat = chatRepository.getChatsStream().first().firstOrNull()
-                val fiveMinutesAgo = Clock.System.now().minus(5.minutes)
+                val fiveMinutesAgo = kotlin.time.Clock.System.now().minus(5.minutes)
 
                 if ((latestChat != null) && (latestChat.updatedAt > fiveMinutesAgo)) {
                     chatId.update { latestChat.id }

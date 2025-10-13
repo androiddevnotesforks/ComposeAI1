@@ -7,7 +7,7 @@ import com.aallam.openai.api.chat.ChatRole
 import com.ebfstudio.appgpt.common.ChatEntity
 import com.ebfstudio.appgpt.common.ChatMessageEntity
 import com.ebfstudio.appgpt.common.Database
-import kotlinx.datetime.Instant
+import kotlin.time.Instant
 
 object AppDatabase {
     fun getDatabase(driver: SqlDriver): Database {
